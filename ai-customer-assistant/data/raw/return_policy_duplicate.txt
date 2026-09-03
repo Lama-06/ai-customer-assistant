@@ -1,0 +1,8 @@
+Return Policy
+
+Customers can return any product within 30 days of purchase, as long as the item
+is unused and in its original packaging. To start a return, go to your Orders page,
+select the item, and click "Return Item". Refunds are processed within 5-7 business
+days after we receive the returned product.
+
+Items marked as "Final Sale" cannot be returned or exchanged.

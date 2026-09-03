@@ -1,0 +1,9 @@
+Payment Methods
+
+We accept the following payment methods: Visa, Mastercard, Mada, and Apple Pay.
+All payments are processed securely, and we never store your full card number on
+our servers.
+
+If a payment fails, please check that your card details are correct and that your
+bank allows online purchases. You can also contact your bank directly to authorize
+international or online transactions if needed.
