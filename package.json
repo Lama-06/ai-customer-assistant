@@ -1,0 +1,13 @@
+{
+  "name": "parents-group-bot",
+  "version": "1.0.0",
+  "description": "بوت تليجرام لقروب اولياء الامور",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0",
+    "express": "^4.19.2"
+  }
+}
