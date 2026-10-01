@@ -245,7 +245,13 @@ function sendWelcomeMenu(chatId, firstName) {
 
 // أمر /start (أول رسالة لما حد يفتح البوت لأول مرة)
 bot.onText(/^\/start/, (msg) => {
+  console.log(`📩 استلمت /start من: ${msg.from.first_name} (${msg.chat.id})`);
   sendWelcomeMenu(msg.chat.id, msg.from.first_name);
+});
+
+// تسجيل أي خطأ بالـ polling عشان يبين بالـ Logs مباشرة
+bot.on("polling_error", (err) => {
+  console.error("❌ خطأ بالـ polling:", err.code, err.message);
 });
 
 // ============================================
@@ -284,10 +290,12 @@ bot.on("callback_query", (query) => {
 // ============================================
 bot.on("message", (msg) => {
   if (!msg.text) return; // تجاهل الصور/الملفات المرسلة من الأعضاء
+  console.log(`📩 رسالة من ${msg.from.first_name}: "${msg.text}"`);
   if (msg.text.startsWith("/")) return; // الأوامر زي /start ليها معالج خاص فوق
 
   // لو الرسالة سلام/ترحيب: نرحب بالاسم ونطلع القائمة الرئيسية
   const greetingMatch = findGreeting(msg.text);
+  console.log(`   -> ترحيب؟ ${greetingMatch}`);
   if (greetingMatch) {
     sendWelcomeMenu(msg.chat.id, msg.from.first_name);
     return;
